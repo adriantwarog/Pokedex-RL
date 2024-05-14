@@ -1,0 +1,22 @@
+{
+  asset_id: '40df4057ee0cd30d71686c384dfed4fd',
+  public_id: 'dzybwck0fjwinszq9rsk',
+  version: 1713952189,
+  version_id: '84c81ceaf4a8dc321c9aaff095dde679',
+  signature: 'e1ca3204653e1b152175b074dc124dfedd532f3c',
+  width: 225,
+  height: 225,
+  format: 'jpg',
+  resource_type: 'image',
+  created_at: '2024-04-24T09:49:49Z',
+  tags: [],
+  bytes: 36850,
+  type: 'upload',
+  etag: '3209e97ce317fb09cbe39254f9530d86',
+  placeholder: false,
+  url: 'http://res.cloudinary.com/youtubeai/image/upload/v1713952189/dzybwck0fjwinszq9rsk.jpg',
+  secure_url: 'https://res.cloudinary.com/youtubeai/image/upload/v1713952189/dzybwck0fjwinszq9rsk.jpg',
+  folder: '',
+  access_mode: 'public',
+  api_key: '462488747336374'
+}

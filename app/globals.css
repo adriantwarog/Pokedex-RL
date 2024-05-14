@@ -1,0 +1,933 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Pokedex;
+  src: url(./imgs/PoetsenOne-Regular.ttf);
+}
+
+
+:root {
+  /* --foreground-rgb: 0, 0, 0; */
+  /* --background-start-rgb: 214, 219, 220; */
+  /* --background-end-rgb: 255, 255, 255; */
+  --water: #5090D6; 
+  --water-rgb: 80, 144, 214;
+  --dragon: #0B6DC3; 
+  --dragon-rgb: 11, 109, 195;
+  --electric: #F4D23C; 
+  --electric-rgb: 244, 210, 60;
+  --fairy: #EC8FE6; 
+  --fairy-rgb: 236, 143, 230;
+  --ghost: #5269AD; 
+  --ghost-rgb: 82, 105, 173;
+  --fire: #FF9D55; 
+  --fire-rgb: 255, 157, 85;
+  --ice: #73CEC0; 
+  --ice-rgb: 115, 206, 192;
+  --grass: #63BC5A; 
+  --grass-rgb: 99, 188, 90;
+  --bug: #91C12F; 
+  --bug-rgb: 145, 193, 47;
+  --fighting: #CE416B; 
+  --fighting-rgb: 206, 65, 107;
+  --normal: #919AA2; 
+  --normal-rgb: 145, 154, 162;
+  --dark: #5A5465; 
+  --dark-rgb: 90, 84, 101;
+  --metal: #5A8EA2; 
+  --metal-rgb: 90, 142, 162;
+  --stone: #C5B78C; 
+  --stone-rgb: 197, 183, 140;
+  --psychic: #FA7179; 
+  --psychic-rgb: 250, 113, 121;
+  --earth: #D97845; 
+  --earth-rgb: 217, 120, 69;
+  --poison: #B567CE; 
+  --poison-rgb: 181, 103, 206;
+  --flying: #89AAE3; 
+  --flying-rgb: 137, 170, 227;
+
+  --inanimate: #ddd; 
+  --inanimate-rgb: 200, 200, 200;
+
+}
+
+.bg-inanimate {
+  background: var(--inanimate);
+}
+
+.bg-100-inanimate {
+  /* background: rgba(var(--water-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--inanimate-rgb), 0.15), rgba(var(--inanimate-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/inanimate.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+
+.bg-water {
+  background: var(--water);
+}
+.bg-dragon {
+  background: var(--dragon);
+}
+.bg-electric {
+  background: var(--electric);
+}
+.bg-fairy {
+  background: var(--fairy);
+}
+.bg-ghost {
+  background: var(--ghost);
+}
+.bg-fire {
+  background: var(--fire);
+}
+.bg-ice {
+  background: var(--ice);
+}
+.bg-grass {
+  background: var(--grass);
+}
+.bg-bug {
+  background: var(--bug);
+}
+.bg-fighting {
+  background: var(--fighting);
+}
+.bg-normal {
+  background: var(--normal);
+}
+.bg-dark {
+  background: var(--dark);
+}
+.bg-metal {
+  background: var(--metal);
+}
+.bg-stone {
+  background: var(--stone);
+}
+.bg-psychic {
+  background: var(--psychic);
+}
+.bg-earth {
+  background: var(--earth);
+}
+.bg-ground {
+  background: var(--earth);
+}
+.bg-poison {
+  background: var(--poison);
+}
+.bg-flying {
+  background: var(--flying);
+}
+
+/* Light Versions */
+
+.bg-100-water {
+  /* background: rgba(var(--water-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--water-rgb), 0.15), rgba(var(--water-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/water.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-dragon {
+  /* background: rgba(var(--dragon-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--dragon-rgb), 0.15), rgba(var(--dragon-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/dragon.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-electric {
+  /* background: rgba(var(--electric-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--electric-rgb), 0.15), rgba(var(--electric-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/electric.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-fairy {
+  /* background: rgba(var(--fairy-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--fairy-rgb), 0.15), rgba(var(--fairy-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/fairy.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-ghost {
+  /* background: rgba(var(--ghost-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--ghost-rgb), 0.15), rgba(var(--ghost-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/ghost.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-fire {
+  /* background: rgba(var(--fire-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--fire-rgb), 0.15), rgba(var(--fire-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/fire.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-ice {
+  /* background: rgba(var(--ice-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--ice-rgb), 0.15), rgba(var(--ice-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/ice.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-grass {
+  /* background: rgba(var(--grass-rgb), 0.15); */
+  background:linear-gradient(to right, rgba(var(--grass-rgb), 0.15), rgba(var(--grass-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/grass.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-bug {
+  /* background: rgba(var(--bug-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--bug-rgb), 0.15), rgba(var(--bug-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/bug.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-fighting {
+  /* background: rgba(var(--fighting-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--fighting-rgb), 0.15), rgba(var(--fighting-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/fighting.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-normal {
+  /* background: rgba(var(--normal-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--normal-rgb), 0.15), rgba(var(--normal-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/normal.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-dark {
+  /* background: rgba(var(--dark-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--dark-rgb), 0.15), rgba(var(--dark-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/dark.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-metal {
+  /* background: rgba(var(--metal-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--metal-rgb), 0.15), rgba(var(--metal-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/metal.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-stone {
+  /* background: rgba(var(--stone-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--stone-rgb), 0.15), rgba(var(--stone-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/stone.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-psychic {
+  /* background: rgba(var(--psychic-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--psychic-rgb), 0.15), rgba(var(--psychic-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/psychic.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-earth {
+  /* background: rgba(var(--earth-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--earth-rgb), 0.15), rgba(var(--earth-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/ground.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-ground {
+  /* background: rgba(var(--earth-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--earth-rgb), 0.15), rgba(var(--earth-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/ground.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-poison {
+  /* background: rgba(var(--poison-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--poison-rgb), 0.15), rgba(var(--poison-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/poison.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+.bg-100-flying {
+  /* background: rgba(var(--flying-rgb), 0.15); */
+  background: linear-gradient(to right, rgba(var(--flying-rgb), 0.15), rgba(var(--flying-rgb), 1));
+  position:relative;
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:12px;
+    left:0;
+    bottom:12px;
+    right:0;
+    background-image:url('/flying.svg');
+    background-size:auto 100% ;
+    background-repeat:no-repeat;
+    /* left middle */
+    background-position: 33.33% 50%;
+    z-index:-1;
+    opacity:0.3;
+  }
+}
+
+
+
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    padding-top:80px;
+    /* padding-bottom:60px; */
+    overflow-x:hidden;
+}
+
+.bg-pokeball {
+  position:fixed;
+  bottom:0;
+  right:0;
+  left:0;
+  top:0;
+  background-image:url('./imgs/bg-pokeball.svg');
+  background-repeat:no-repeat;
+  background-position:bottom right;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  z-index:-1000;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#header {
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  background:#f1f1f1;
+  z-index:100;
+  
+  .header-left {
+    background-image: url('./imgs/header-top-left.svg');
+    position: absolute;
+    top:0;
+    left:0;
+    height:135px;
+    width:250px;
+  }
+  .header-right {
+    background-image: url('./imgs/header-top-right.svg');
+    position: absolute;
+    height:87px;
+    top:0;
+    left:250px;
+    right:0;
+  }
+  
+}
+
+.login-page {
+  background-image: url('./imgs/login-bg.jpg');
+  background-size:cover;
+  background-position:top center;
+  /* min-height:100vh; */
+  position:absolute;
+  top:0;right:0;bottom:0;left:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.login-image {
+  background-image: url('./imgs/login-image.png');
+  background-size:contain;
+  background-position:center;
+}
+
+#footer {
+  position:fixed;
+  left:0;right:0;bottom:0;
+  height:60px;
+  background:white;
+  backdrop-filter: blur(10px);
+  border-top:1px solid rgba(255,255,255,0.5);
+  box-shadow: 0px -5px 10px rgba(0,0,0,0.1), 0px -10px 20px rgba(0,0,0,0.1);
+  font-size:10px;
+
+  &.photo-footer {
+    border:none;
+    background:#37424E;
+    box-shadow:none;
+  }
+  .camera-button {
+    transition: filter 0.2s;
+  }
+  .buttonPressed {
+    /* filter: invert(1); */
+    /* desaturate */
+    /* filter: grayscale(100%); */
+    /* increase saturation */
+    filter: saturate(200%);
+    
+  }
+  .loadingContent {
+    filter: grayscale(100%);
+  }
+}
+
+.photo-footer-bg {
+  position:fixed;
+  left:0;right:0;bottom:0;
+  top:0;
+  z-index:-1;
+  background:#424B58;
+  background-image:url('./imgs/camera-bg.jpg');
+  background-size:cover;
+  background-position:center;
+  
+}
+
+
+.camera-text {
+  color:white;
+  text-align:center;
+  line-height:1.15;
+ 
+  .title {
+    font-family:Pokedex, sans-serif;
+    font-size:2.5em;
+  }
+  .desc {
+    opacity:0.6;
+    font-size:1.25em;
+  }
+}
+
+.camera-image-holder {
+  /* padding-left:5vw;
+  padding-right:5vw;
+  padding-top:50px; */
+  position:relative;
+  width:100vw;
+  height:100vw;
+  max-width:480px;
+  max-height:480px;
+  margin:auto;
+
+  /* padding-bottom:100%; */
+  margin-top:40px;
+
+  .camera-outline {
+    /* position:relative;
+    z-index:100; */
+    
+  }
+ 
+  .video-holder {
+    position:absolute;
+    border:15px solid #CFE0E6;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
+    right:calc(5vw);
+    left:calc(5vw);
+    top:calc(5vw);
+    bottom:5vw;
+    /* border:1px solid blue; */
+    border-radius:50%;
+    overflow:hidden;
+    background:black;
+    /* transition: ease 0.2s all; */
+
+    &.buttonPressed {
+      box-shadow: 0px -5px 10px rgba(255,255,255,0.1), 0px -10px 20px rgba(255,255,255,0.1);
+      video {
+        /* filter: saturate(200%); */
+        /* brightness increase along with saturation */
+        filter: brightness(150%) saturate(200%);
+      }
+    }
+
+    .camera-snap-preview {
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      object-fit: cover;
+      object-position: center;
+      background-size:cover;
+      background-position:center;
+      right:0;
+      bottom:0;
+      border-radius:50%;
+    }
+    
+    video {
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      object-fit: cover;
+      object-position: center;
+      right:0;
+      bottom:0;
+      border-radius:50%;
+    }
+  }
+}
+
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.bouncing-loader > div {
+  width: 16px;
+  height: 16px;
+  margin: 3px 6px;
+  border-radius: 50%;
+  background-color: #a3a1a1;
+  opacity: 1;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translateY(-16px);
+  }
+}
+
+/* fading-in-out animation */
+@keyframes fading-in-out {
+  0% {
+    opacity: 0.33;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.33;
+  }
+}
+.fading-in-out {
+  animation: fading-in-out 2.4s infinite;
+  transition-timing-function: linear;
+}
+
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+
+.poke-preview {
+  min-height:280px;
+  height:50vw;
+  background-size:cover;
+  background-position:center;
+  /* background-color:black; */
+  position:relative;
+  /* &:after {
+    position:absolute;
+    bottom:0;right:0;left:0;height:50px;
+    content:'';
+    display:block;
+    background:linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0));
+  }
+  &:before {
+    position:absolute;
+    top:0;right:0;left:0;height:60px;
+    content:'';
+    display:block;
+    background:linear-gradient(180deg, rgba(0,0,0,1), rgba(0,0,0,0));
+  }
+  margin-top:-100px;
+  border-top:100px solid black;
+  border-bottom:50px solid black; */
+}
+
+.poke-info {
+  background:white;
+  border-top-left-radius:50px;
+  border-top-right-radius:50px;
+  margin-top:-50px;
+  position:relative;
+  padding:20px;
+  padding-top:40px;
+  padding-bottom:100px;
+
+  .stat-graph {
+    display:flex;
+    padding:15px;
+    justify-content:center;
+    align-items:center;
+    border:1px solid #ccc;
+    margin:10px;
+    border-radius:50px;
+  }
+
+  .poke-name {
+    font-family:Pokedex, sans-serif;
+    font-size:2em;
+    text-align:center;
+  }
+  
+  .poke-desc {
+    font-size:1.25em;
+    opacity:0.6;
+    text-align:center;
+  }
+  .title {
+    font-weight:600;
+    font-size:32px;
+    line-height:1;
+  }
+  .type {
+    font-size:18px;
+    font-weight:600;
+    display:inline-block;
+    padding:5px 20px;
+    border-radius:30px;;
+    margin-bottom:15px;
+    margin-top:15px;
+  }
+  .description {
+    opacity:0.75;
+    margin-bottom:15px;
+  }
+
+  .stats {
+    .stat {
+      display:flex;
+      align-items:center;
+      .stat-icon {
+        svg {
+          width:24px;
+        }
+      }
+      .stat-attr {
+        font-weight:600;
+      }
+      .stat-value {
+        flex:1;
+        opacity:0.6;
+      }
+    }
+  }
+
+}
+
+
+
+
+.-water {}
+.-dragon {}
+.-electric {}
+.-fairy {}
+.-ghost {}
+.-fire {}
+.-ice {}
+.-grass {}
+.-bug {}
+.-fighting {}
+.-normal {}
+.-dark {}
+.-metal {}
+.-stone {}
+.-psychic {}
+.-earth {}
+.-poison {}
+.-flying {}
+

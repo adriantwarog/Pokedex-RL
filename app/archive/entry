@@ -1,0 +1,16 @@
+// let entry = {
+// 	object: "Wood Mouse",
+// 	species: "Rodent",
+// 	weight: "20-50 grams",
+// 	height: "8-10 cm",
+// 	hp: 30,
+// 	attack: 25,
+// 	defense: 15,
+// 	speed: 30,
+// 	type: "normal",
+// 	description: "Wood Mouse. It is a species of rodent. It is adaptable to a range of habitats but commonly found in forests and grasslands. It primarily feeds on seeds, nuts, and small invertebrates. It is known for its ability to climb and its quick movements. The Wood Mouse is often active at night and is widespread across Europe and Asia. It typically measures around 8 to 10 cm in body length with a similar length tail and weighs about 20 to 50 grams.",
+// 	voiceJobToken: "jinf_9es1a71wpnjya9q53j87z38r7z1",
+// 	voicePath: "/media/z/x/w/0/p/zxw0p4tqpq9ywmcfpg32wpnx9g52f2bs/fakeyou_zxw0p4tqpq9ywmcfpg32wpnx9g52f2bs.wav",
+// 	voiceStatus: "complete_success",
+// 	voiceUrl: "https://storage.googleapis.com/vocodes-public/media/z/x/w/0/p/zxw0p4tqpq9ywmcfpg32wpnx9g52f2bs/fakeyou_zxw0p4tqpq9ywmcfpg32wpnx9g52f2bs.wav",
+// }
