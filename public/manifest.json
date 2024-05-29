@@ -1,0 +1,17 @@
+{
+    "short_name": "RL Pokedex",
+    "name": "Real Life Pokedex GPT",
+    "icons": [
+      {
+        "src": "/next.svg",
+        "type": "image/svg+xml",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "rl-pokedex",
+    "start_url": "/",
+    "background_color": "#D02434",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#D02434"
+  }
