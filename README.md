@@ -1,8 +1,10 @@
-Due to AI pricing requirements, I am unable to host this project indefinitely. Watch the [full demo video of it here](https://youtu.be/NBmLFMN0fdw).
+Due to AI pricing requirements, I am unable to host this project indefinitely. You can clone the project here on github. Preview [full demo video here](https://youtu.be/NBmLFMN0fdw).
 
 ![Pokedex for Real Life](preview.gif)
 
 ## Getting Started
+
+This project is built on top of Next JS, you can clone your own instance and perform the following configuration to get it up and running.
 
 1. Configure the .env file with details on (API Keys):
 - [Astra DB](#) - Database on DataStax
@@ -10,7 +12,7 @@ Due to AI pricing requirements, I am unable to host this project indefinitely. W
 - [Cloudinary](#) - Image model
 - [Fakeyou](#) - Voice generation model
 - [Google](#) - Authentication for Next JS
-
+- [Next JS](#)  - Frontend and Backend
 
 2. First, run the development server:
 
