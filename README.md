@@ -1,3 +1,5 @@
+Due to AI pricing requirements, I am unable to host this project indefinitely. Watch the [full demo video of it here](https://youtu.be/NBmLFMN0fdw).
+
 ![Pokedex for Real Life](preview.gif)
 
 ## Getting Started
