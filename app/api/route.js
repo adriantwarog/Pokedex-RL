@@ -90,7 +90,12 @@ const generateEntry = async (imageDescription) => {
 
 const getNoObject = async () => {
 	const collection = db.collection('pokedex');
-	let poke = await collection.findOne({},{ sort: { no: -1 } });
+	let poke = await collection.findOne({}, { sort: { no: -1 } });
+
+	if (poke == null) {
+		return 1;
+	}
+
 	return poke.no + 1;
 }
 
